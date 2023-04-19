@@ -1,4 +1,4 @@
-
+#include "location.c"
 /**
  * process_command - processes the command and arguments passed
  * @agv: array of strings with lead by command followed by arguments
@@ -17,7 +17,7 @@ int process_command(char **argv)
 	}
 	else if (child_p == 0)
 	{
-		command = argv[0];
+		command = get_location(argv[0]);
 		if (execve(command, argv, NULL) == -1)
 		{
 			perror("Error: command not found\n");

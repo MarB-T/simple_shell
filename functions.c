@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 #include "headers.h"
-=======
->>>>>>> 4eae7a8d846d2ac5436cdebbd9db7952c0c3fc45
 
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
