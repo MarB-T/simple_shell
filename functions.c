@@ -1,10 +1,11 @@
 #include "headers.h"
 
-extern char **environ;
 
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
- * @args: argument string
+ * @inputstr: the string to tokenize
+ * @num_of_chars: number of chars in input string
+ * @argv: pointer to where string tokens will be written
  * Return: 0(success) or error codes
  *
  */
@@ -52,19 +53,24 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	return (0);
 }
 
+/**
+ * _getenv - Gets an environment variable
+ * @name: name of environment variable to check
+ * Return: pointer to sought env vaiable
+ */
 
-char *_getenv(const char *name) {
-    size_t name_len = strlen(name);
-    char **env_var;
+char *_getenv(const char *name)
+{
+	size_t name_len = strlen(name);
+	char **env_var;
 
-    for (env_var = environ; *env_var != NULL; env_var++) {
-        if (strncmp(*env_var, name, name_len) == 0 && (*env_var)[name_len] == '=') {
-            return &(*env_var)[name_len + 1];
-        }
-    }
+	for (env_var = environ; *env_var != NULL; env_var++)
+	{
+		if (strncmp(*env_var, name, name_len) == 0 && (*env_var)[name_len] == '=')
+		{
+			return (&(*env_var)[name_len + 1]);
+		}
+	}
 
-    return NULL;
+	return (NULL);
 }
-
-
-

@@ -1,7 +1,7 @@
 #include "location.c"
 /**
  * process_command - processes the command and arguments passed
- * @agv: array of strings with lead by command followed by arguments
+ * @argv: array of strings with lead by command followed by arguments
  * Return: error code (int)
  */
 
@@ -23,7 +23,6 @@ int process_command(char **argv)
 			perror("Error: command not found\n");
 			exit(1);
 		}
-		
 	}
 	else
 	{

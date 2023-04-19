@@ -13,7 +13,6 @@ char *get_location(char *cmd)
 	int cmd_len, dir_len;
 	struct stat buff;
 
-//	path = environ;
 	path = _getenv("PATH");
 	if (path)
 	{

@@ -10,6 +10,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+extern char **environ;
+
 int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv);
 int process_command(char **argv);
 char *get_location(char *cmd);
