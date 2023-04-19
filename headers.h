@@ -16,5 +16,6 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv);
 int process_command(char **argv);
 char *get_location(char *cmd);
 char *_getenv(const char *name);
+void shell_exit(void);
 
 #endif

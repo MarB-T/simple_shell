@@ -49,6 +49,13 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 		token = strtok(NULL, delim);
 	}
 	(*argv)[i] = NULL;
+	if (*argv[0] != NULL)
+	{
+		if (strcmp(*argv[0], "exit") == 0)
+		{
+			shell_exit();
+		}
+	}
 	printf("%s\n", (*argv)[0]);
 	return (0);
 }
@@ -73,4 +80,16 @@ char *_getenv(const char *name)
 	}
 
 	return (NULL);
+}
+
+/**
+ * shell_exit - exits a program
+ *
+ * Return: 0
+ */
+
+void shell_exit(void)
+{
+	printf("Exiting shell\n");
+	exit(0);
 }
