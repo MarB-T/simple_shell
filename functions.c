@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #include "headers.h"
+=======
+>>>>>>> 4eae7a8d846d2ac5436cdebbd9db7952c0c3fc45
 
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
@@ -7,7 +10,7 @@
  *
  */
 
-int parsing_arg(char *inputstr, ssize_t num_of_chars, char ***argv)
+int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 {
 	char *inputstr_cp;
 	char *token = NULL;
