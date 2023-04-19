@@ -18,6 +18,8 @@ int main()
 	ssize_t num_of_chars;
 	int ret;
 
+	(void)ret;
+
 	while (1)
 	{
 		if (feof(stdin))

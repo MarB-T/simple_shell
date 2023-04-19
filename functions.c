@@ -1,3 +1,4 @@
+
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
  * @args: argument string
@@ -5,7 +6,7 @@
  *
  */
 
-int parsing_arg(char *inputstr, ssize_t num_of_chars, char ***argv)
+int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 {
 	char *inputstr_cp;
 	char *token = NULL;

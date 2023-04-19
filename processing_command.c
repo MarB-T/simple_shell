@@ -1,4 +1,3 @@
-#include "headers.h"
 
 /**
  * process_command - processes the command and arguments passed
@@ -25,4 +24,5 @@ int process_command(char **argv)
 	{
 		wait(NULL);
 	}
+	return (0);
 }
