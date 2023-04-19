@@ -1,5 +1,7 @@
 #include "headers.h"
 
+extern char **environ;
+
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
  * @args: argument string
@@ -49,3 +51,20 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	printf("%s\n", (*argv)[0]);
 	return (0);
 }
+
+
+char *_getenv(const char *name) {
+    size_t name_len = strlen(name);
+    char **env_var;
+
+    for (env_var = environ; *env_var != NULL; env_var++) {
+        if (strncmp(*env_var, name, name_len) == 0 && (*env_var)[name_len] == '=') {
+            return &(*env_var)[name_len + 1];
+        }
+    }
+
+    return NULL;
+}
+
+
+
