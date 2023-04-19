@@ -16,6 +16,8 @@ int main(int ac, char **av)
 	char **argv = NULL;
 	size_t len = 0;
 	ssize_t num_of_chars;
+	(void)ac;
+	(void)av;
 
 	while (1)
 	{
