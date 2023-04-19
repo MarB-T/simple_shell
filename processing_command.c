@@ -8,21 +8,27 @@
 
 int process_command(char **argv)
 {
+	char *command = NULL;
 	pid_t child_p = fork();
 
 	if (child_p < 0)
 	{
-		printf("Error: fork failed\n");
+		perror("Error: fork failed\n");
 		exit(1);
 	}
 	else if (child_p == 0)
 	{
-		execvp(argv[0], argv);
-		printf("Error: command not found\n");
-		exit(1);
+		command = argv[0];
+		if (execve(command, argv, NULL) == -1)
+		{
+			perror("Error: command not found\n");
+			exit(1);
+		}
+		
 	}
 	else
 	{
 		wait(NULL);
 	}
+	return (0);
 }

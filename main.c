@@ -16,7 +16,7 @@ int main()
 	char **argv = NULL;
 	size_t len = 0;
 	ssize_t num_of_chars;
-	int ret;
+	
 
 	while (1)
 	{

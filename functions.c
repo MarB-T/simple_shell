@@ -1,3 +1,5 @@
+#include "headers.h"
+
 /**
  * parsing_arg - handles arguments passed to "simple_shell"
  * @args: argument string
