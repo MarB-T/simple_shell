@@ -1,4 +1,5 @@
 #include "headers.h"
+#include "str_functions.c"
 
 
 /**
@@ -20,7 +21,7 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	inputstr_cp = malloc(sizeof(char) * num_of_chars);
 	if (inputstr_cp == NULL)
 		error_msg(99);
-	strcpy(inputstr_cp, inputstr);
+	_strcpy(inputstr_cp, inputstr);
 	token = strtok(inputstr, delim);
 	while (token != NULL)
 	{
@@ -36,13 +37,13 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 		(*argv)[i] = malloc(sizeof(char) * strlen(token));
 		if ((*argv)[i] == NULL)
 			error_msg(99);
-		strcpy((*argv)[i], token);
+		_strcpy((*argv)[i], token);
 		token = strtok(NULL, delim);
 	}
 	(*argv)[i] = NULL;
 	if (*argv[0] != NULL)
 	{
-		if (strcmp(*argv[0], "exit") == 0)
+		if (_strcmp(*argv[0], "exit") == 0)
 		{
 			shell_exit();
 		}
