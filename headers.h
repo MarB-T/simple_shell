@@ -17,5 +17,6 @@ int process_command(char **argv);
 char *get_location(char *cmd);
 char *_getenv(const char *name);
 void shell_exit(void);
+void error_msg(int error_code);
 
 #endif
