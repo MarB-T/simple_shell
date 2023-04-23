@@ -1,4 +1,5 @@
 #include "headers.h"
+#include "str_functions.c"
 
 
 /**
@@ -17,11 +18,8 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 
 	inputstr_cp = malloc(sizeof(char) * num_of_chars);
 	if (inputstr_cp == NULL)
-	{
-		printf("Memeory allocation error\n");
-		return (-1);
-	}
-	strcpy(inputstr_cp, inputstr);
+		error_msg(99);
+	_strcpy(inputstr_cp, inputstr);
 	token = strtok(inputstr, delim);
 	while (token != NULL)
 	{
@@ -30,26 +28,20 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	}
 	*argv = malloc(sizeof(char *) * tokens);
 	if (*argv == NULL)
-	{
-		printf("Mem allocation error!\n");
-		return (-1);
-	}
+		error_msg(99);
 	token = strtok(inputstr_cp, delim);
 	for (i = 0; token != NULL; i++)
 	{
 		(*argv)[i] = malloc(sizeof(char) * strlen(token));
 		if ((*argv)[i] == NULL)
-		{
-			printf("Mem allocation error\n");
-			return (-1);
-		}
-		strcpy((*argv)[i], token);
+			error_msg(99);
+		_strcpy((*argv)[i], token);
 		token = strtok(NULL, delim);
 	}
 	(*argv)[i] = NULL;
 	if (*argv[0] != NULL)
 	{
-		if (strcmp(*argv[0], "exit") == 0)
+		if (_strcmp(*argv[0], "exit") == 0)
 		{
 			shell_exit();
 		}
@@ -90,4 +82,21 @@ void shell_exit(void)
 {
 	printf("Exiting shell\n");
 	exit(0);
+}
+
+/**
+ * error_msg - handles error messages
+ * @error_code: error code
+ * Return: nothing
+ *
+ */
+
+void error_msg(int error_code)
+{
+	switch (error_code)
+	{
+		case 99:
+			perror("Memory allocation error");
+			exit(0);
+	}
 }
