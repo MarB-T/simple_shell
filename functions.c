@@ -12,10 +12,8 @@
 
 int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 {
-	char *inputstr_cp;
-	char *token = NULL;
+	char *inputstr_cp, *token = NULL, *delim = " \n";
 	int tokens = 0, i = 0;
-	char *delim = " \n";
 
 	inputstr_cp = malloc(sizeof(char) * num_of_chars);
 	if (inputstr_cp == NULL)
