@@ -1,5 +1,4 @@
 #include "headers.h"
-#include "str_functions.c"
 
 
 /**

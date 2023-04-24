@@ -1,4 +1,4 @@
-#include "location.c"
+#include "headers.h"
 /**
  * process_command - processes the command and arguments passed
  * @argv: array of strings with lead by command followed by arguments

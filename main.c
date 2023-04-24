@@ -1,6 +1,4 @@
 #include "headers.h"
-#include "functions.c"
-#include "processing_command.c"
 
 /**
  * main - program to run a custuom simple shell
