@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	{
 		if (feof(stdin))
 			break;
-		printf("%s", prompt);
+		write(STDOUT_FILENO, prompt, 14);
 		num_of_chars = _getline(&inputstr, &len, stdin);
 		if (num_of_chars == -1)
 			return (-1);
