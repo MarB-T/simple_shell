@@ -2,15 +2,15 @@
 #include "headers.h"
 
 /**
- * exec_builtin - checks if argument is
- * a builtin command
+ * env_builtin - checks if argument is
+ * a builtin env command
  * @args: pointer to an array of arguments
  *
  * Return: 1 if argument is built-in
  * 0 if argument is not built-in
  */
 
-int exec_builtin(char **args)
+int env_builtin(char **args)
 {
 	char **env;
 
