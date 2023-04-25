@@ -22,5 +22,8 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
+ssize_t _getline(char **line_ptr, size_t *n, FILE *stream);
+void *_realloc(void *old_mem, unsigned int nw, unsigned int old);
+void update_line_ptr(char **ptr, char *buf, size_t *n, ssize_t input);
 
 #endif

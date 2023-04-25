@@ -79,7 +79,6 @@ char *_getenv(const char *name)
 
 void shell_exit(void)
 {
-	printf("Exiting shell\n");
 	exit(0);
 }
 

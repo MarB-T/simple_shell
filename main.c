@@ -22,7 +22,7 @@ int main(int ac, char **av)
 		if (feof(stdin))
 			break;
 		printf("%s", prompt);
-		num_of_chars = getline(&inputstr, &len, stdin);
+		num_of_chars = _getline(&inputstr, &len, stdin);
 		if (num_of_chars == -1)
 			return (-1);
 		parsing_arg(inputstr, num_of_chars, &argv);
