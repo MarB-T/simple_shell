@@ -1,8 +1,8 @@
-ALX Project to create of a Simple Shell in C
+ALX Project to create a Simple Shell in C
 
 The following are the allowed std functions and system calls:
-	.access
-	.chdir
+	-access
+	-chdir
 	.close
 	.closedir
 	.execve
