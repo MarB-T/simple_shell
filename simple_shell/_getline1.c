@@ -1,5 +1,14 @@
 #include "headers.h"
 
+/**
+ * _getline - custom getline function reads from stream
+ * @lineptr: pointer to where read chars will be stored
+ * @n: the intial size of lineptr
+ * @stream: the source
+ * Return: Number of chars if success otherwisr -1
+ *
+ */
+
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 {
 	char *pos;

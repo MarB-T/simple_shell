@@ -45,10 +45,13 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 			shell_exit();
 		}
 	}
+<<<<<<< HEAD
 	printf("%s\n", (*argv)[0]);
 	for (i = 0; (*argv)[i] != NULL; i++)
 		free((*argv)[i]);
 	free(*argv);
+=======
+>>>>>>> cd6e0b154e2de0e59343fb06892abbb755622321
 	return (0);
 }
 
