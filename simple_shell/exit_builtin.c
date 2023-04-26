@@ -13,7 +13,7 @@ void exit_bulitin(char **args)
 
 	if (args[i] != NULL)
 	{
-		stat = atoi(args);
+		stat = atoi(args[i]);
 	}
 	free(args);
 	exit(stat);
