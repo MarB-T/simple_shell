@@ -27,6 +27,9 @@ int main(int ac, char **av)
 			return (-1);
 		parsing_arg(inputstr, num_of_chars, &argv);
 		process_command(argv);
+		for (i = 0; argv[i] != NULL; i++)
+			free(argv);
+		free(argv);
 	}
 
 	free(inputstr);
