@@ -45,7 +45,6 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 			shell_exit();
 		}
 	}
-	printf("%s\n", (*argv)[0]);
 	return (0);
 }
 
