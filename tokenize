@@ -10,7 +10,7 @@
 char **_strtok(char *str, const char *delim)
 {
 	char **tokens_ptr = NULL;
-	int i = 0, tokens = 0, t, len, c = 0, j;
+	int i = 0, tokens = 0, t, c = 0, j;
 
 	if (str == NULL || delim == NULL)
 		return (NULL);

@@ -19,23 +19,23 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	if (inputstr_cp == NULL)
 		error_msg(99);
 	_strcpy(inputstr_cp, inputstr);
-	token = strtok(inputstr, delim);
+	token = _strtok(inputstr, delim);
 	while (token != NULL)
 	{
 		tokens++;
-		token = strtok(NULL, delim);
+		token = _strtok(NULL, delim);
 	}
 	*argv = malloc(sizeof(char *) * tokens);
 	if (*argv == NULL)
 		error_msg(99);
-	token = strtok(inputstr_cp, delim);
+	token = _strtok(inputstr_cp, delim);
 	for (i = 0; token != NULL; i++)
 	{
 		(*argv)[i] = malloc(sizeof(char) * _strlen(token));
 		if ((*argv)[i] == NULL)
 			error_msg(99);
 		_strcpy((*argv)[i], token);
-		token = strtok(NULL, delim);
+		token = _strtok(NULL, delim);
 	}
 	(*argv)[i] = NULL;
 	if (*argv[0] != NULL)
