@@ -9,7 +9,7 @@
 
 void exit_bulitin(char **args)
 {
-	int stat = 0;
+	int stat = 0, i = 0;
 
 	if (args[i] != NULL)
 	{
