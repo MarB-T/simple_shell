@@ -7,15 +7,11 @@
  *
  */
 
-void exit_bulitin(char *args)
+void exit_bulitin(char **args)
 {
-	int stat;
+	int stat = 0;
 
-	if (args == NULL)
-	{
-		stat = 0;
-	}
-	else
+	if (args[i] != NULL)
 	{
 		stat = atoi(args);
 	}
