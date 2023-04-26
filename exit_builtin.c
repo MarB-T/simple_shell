@@ -20,5 +20,5 @@ void exit_bulitin(char *args)
 		stat = atoi(args);
 	}
 	free(args);
-	exit(stat)
+	exit(stat);
 }

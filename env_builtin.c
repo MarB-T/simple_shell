@@ -16,7 +16,7 @@ int env_builtin(char **args)
 
 	if (strcmp(args[0], "env") == 0)
 	{
-		*env = environ;
+		env = environ;
 		while (*env)
 		{
 			printf("%s,\n", *env++);

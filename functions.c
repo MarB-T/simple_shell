@@ -31,7 +31,7 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 	token = strtok(inputstr_cp, delim);
 	for (i = 0; token != NULL; i++)
 	{
-		(*argv)[i] = malloc(sizeof(char) * strlen(token));
+		(*argv)[i] = malloc(sizeof(char) * _strlen(token));
 		if ((*argv)[i] == NULL)
 			error_msg(99);
 		_strcpy((*argv)[i], token);
