@@ -14,12 +14,13 @@ int env_builtin(char **args)
 {
 	char **env;
 
-	if (strcmp(args[0], "env") == 0)
+	if (_strcmp(args[0], "env") == 0)
 	{
 		env = environ;
 		while (*env)
 		{
-			printf("%s,\n", *env++);
+			write(STDOUT_FILENO, *env, _strlen(*env));
+			write(STDOUT_FILENO, "\n", 1);
 		}
 		return (1);
 	}
