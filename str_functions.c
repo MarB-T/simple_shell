@@ -99,7 +99,7 @@ char *_strdup(char *str)
 
 	if (cpy == NULL)
 		return (NULL);
-	for (i = o; i <= len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		cpy[i] = str[i];
 	}
