@@ -51,7 +51,12 @@ char *_strcat(char *dest, char *src)
 char *_strcpy(char *dest, char *src)
 {
 	char *dest_start = dest;
+	unsigned long int src_len = _strlen(src);
 
+	if (dest == NULL || src == NULL)
+		return (NULL);
+	if (src_len + 1 > sizeof(dest))
+		return (NULL);
 	while (*src != '\0')
 	{
 		*dest = *src;
