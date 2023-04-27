@@ -14,9 +14,10 @@ int main(int ac, char **av)
 	char **argv = NULL;
 	size_t len = 0;
 	ssize_t num_of_chars;
+/*	int i = 0;*/
+
 	(void)ac;
 	(void)av;
-
 	while (1)
 	{
 		if (feof(stdin))
@@ -27,8 +28,8 @@ int main(int ac, char **av)
 			return (-1);
 		parsing_arg(inputstr, num_of_chars, &argv);
 		process_command(argv);
-		for (i = 0; argv[i] != NULL; i++)
-			free(argv);
+/*		for (i = 0; argv[i] != NULL; i++)*/
+/*			free(argv);*/
 		free(argv);
 	}
 
