@@ -13,21 +13,7 @@ void exit_bulitin(char **args)
 
 	if (args[i] != NULL)
 	{
-		while (args[i] != '\0')
-		{
-			if (args[i] >= '0' && args[i] <= '9')
-			{
-				stat = stat * 10 + (args[i] - '0');
-			}
-			else
-			{
-				write(STDERR_FILENO, "exit", 22);
-				write(STDERR_FILENO, args[i], _strlen(args[i]));
-				write(STDERR_FILENO, "\n", 1);
-				free(args);
-				exit(2);
-			}
-		}
+		stat = atoi(args[i];
 	}
 	free(args);
 	exit(stat);
