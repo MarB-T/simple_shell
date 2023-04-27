@@ -49,11 +49,11 @@ char *_strtok(char *str, const char *delim)
 
 /* find the end of the token */
 	token = last_token;
-	for (i = 0; *last_token && !strchr(delim, *last_token); i++)
+	for (i = 0; *last_token && !_strchr(delim, *last_token); i++)
 		last_token++;
 
 /* remove trailing delimiters from the token */
-	for (j = i - 1; j >= 0 && strchr(delim, token[j]); j--)
+	for (j = i - 1; j >= 0 && _strchr(delim, token[j]); j--)
 		token[j] = '\0';
 
 /* update last_token */
