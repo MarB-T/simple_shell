@@ -17,8 +17,8 @@ int process_command(char **argv)
 	}
 	else if (child_p == 0)
 	{
-/*		env = _copyenv(); */
-		if (execve(command, argv, environ) == -1)
+		command = get_location(argv[0]);
+		if (execve(command, argv, NULL) == -1)
 		{
 			perror("Error: command not found\n");
 			exit(1);
@@ -28,7 +28,5 @@ int process_command(char **argv)
 	{
 		wait(NULL);
 	}
-
-
 	return (0);
 }

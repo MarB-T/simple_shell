@@ -22,15 +22,11 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
-char *_strdup(char *str);
 void *_realloc(void *old_mem, unsigned int nw, unsigned int old);
 void update_line_ptr(char **ptr, char *buf, size_t *n, ssize_t input);
 int env_bulitin(char **args);
 void exit_bulitin(char **args);
 char *_strtok(char *str, const char *delim);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
-char **_copyenv(void);
-void _setenv(char **args);
-void _unsetenv(char **args);
 
 #endif

@@ -16,7 +16,7 @@ char *get_location(char *cmd)
 	path = _getenv("PATH");
 	if (path)
 	{
-		path_cpy = _strdup(path);
+		path_cpy = strdup(path);
 		cmd_len = _strlen(cmd);
 		token = strtok(path_cpy, ":");
 		while (token)

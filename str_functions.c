@@ -51,12 +51,7 @@ char *_strcat(char *dest, char *src)
 char *_strcpy(char *dest, char *src)
 {
 	char *dest_start = dest;
-	unsigned long int src_len = _strlen(src);
 
-	if (dest == NULL || src == NULL)
-		return (NULL);
-	if (src_len + 1 > sizeof(dest))
-		return (NULL);
 	while (*src != '\0')
 	{
 		*dest = *src;
@@ -83,31 +78,3 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (*s1 - *s2);
 }
-
-/**
- * _strdup - duplicates a string
- * @str: string to be duplicated
- * Return: pointer to string copied
- */
-
-char *_strdup(char *str)
-{
-	unsigned int len, i;
-	char *cpy;
-
-	if (str == NULL)
-		return (NULL);
-
-	for (len = 0; str[len] != '\0'; len++)
-
-	cpy = (char *)malloc(sizeof(char) * (len + 1));
-
-	if (cpy == NULL)
-		return (NULL);
-	for (i = 0; i <= len; i++)
-	{
-		cpy[i] = str[i];
-	}
-	return (cpy);
-}
-
