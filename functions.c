@@ -38,7 +38,7 @@ int parsing_arg(char *inputstr, size_t num_of_chars, char ***argv)
 		token = _strtok(NULL, delim);
 	}
 	(*argv)[i] = NULL;
-	if (*argv[0] != NULL)
+	if ((*argv)[0] != NULL)
 	{
 		if (_strcmp(*argv[0], "exit") == 0)
 		{
