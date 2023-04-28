@@ -10,13 +10,6 @@ int process_command(char **argv)
 	char *command = NULL;
 	pid_t child_p = fork();
 
-	command = get_location(argv[0]);
-	if (!command)
-	{
-		write(STDERR_FILENO, "Error:Command not found\n", 24);
-		return (1);
-	}
-
 	if (child_p < 0)
 	{
 		perror("Error: fork failed\n");
@@ -36,9 +29,6 @@ int process_command(char **argv)
 		wait(NULL);
 	}
 
-	if (command != argv[0])
-	{
-		free(command);
-	}
+
 	return (0);
 }

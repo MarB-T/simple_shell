@@ -29,8 +29,13 @@ char *_strtok(char *str, const char *delim)
 	char *token = NULL;
 	int i, j;
 
+	if (str == NULL && last_token == NULL)
+		return (NULL);
+
 	if (str != NULL)
 		last_token = str;
+
+	token = last_token;
 
 /* skip leading delimiters */
 	while (*last_token && _strchr(delim, *last_token))
@@ -38,6 +43,7 @@ char *_strtok(char *str, const char *delim)
 
 	if (!*last_token)
 	{
+		last_token = NULL;
 		return (NULL);
 	}
 
@@ -45,15 +51,13 @@ char *_strtok(char *str, const char *delim)
 	token = last_token;
 	for (i = 0; *last_token && !_strchr(delim, *last_token); i++)
 		last_token++;
-
-	if (i == 0)
-	{
-		return (_strtok(NULL, delim));
-	}
-
 /* remove trailing delimiters from the token */
 	for (j = i - 1; j >= 0 && _strchr(delim, token[j]); j--)
 		token[j] = '\0';
+
+/* update last_token */
+	if (*last_token)
+		*last_token++ = '\0';
 
 	return (token);
 }
