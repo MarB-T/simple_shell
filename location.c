@@ -1,7 +1,7 @@
 #include "headers.h"
 char *get_location(char *command);
 char *path_dir(char *path);
-list_t *get_dir_path(char *path);
+list_t *get_path_dir(char *path);
 
 /**
  * get_location - finds a command in the PATH.
@@ -103,13 +103,13 @@ char *path_dir(char *path)
 }
 
 /**
- * get_dir_path - tokenizes a colon-separated list of
+ * get_path_dir - tokenizes a colon-separated list of
  *                dirs into a list_s linked list.
  * @path: colon-separated list of dirs.
  *
  * Return: pointer to linked list.
  */
-list_t *get_dir_path(char *path)
+list_t *get_path_dir(char *path)
 {
 	int i;
 	char **dirs, *path_cpy;
