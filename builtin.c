@@ -19,7 +19,7 @@ int (*get_builtin(char *command))(char **args, char **front)
 		{ "setenv", s_setenv },
 		{ "unsetenv", s_unsetenv },
 		{ "cd", s_cd },
-		{ "alias", print_alias },
+		{ "alias", shellby_alias },
 		{ "help", s_help },
 		{ NULL, NULL }
 	};
