@@ -35,7 +35,7 @@ int cant_open(char *file_path)
 	_strcat(err, "\n");
 
 	free(hist_str);
-	write(STDERR_FILENO, error, len);
+	write(STDERR_FILENO, err, len);
 	free(err);
 	return (127);
 }
