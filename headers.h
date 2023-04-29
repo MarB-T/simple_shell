@@ -88,7 +88,7 @@ int s_env(char **args, char __attribute__((__unused__)) **front);
 int s_setenv(char **args, char __attribute__((__unused__)) **front);
 int s_unsetenv(char **args, char __attribute__((__unused__)) **front);
 int s_cd(char **args, char __attribute__((__unused__)) **front);
-int print_alias(char **args, char __attribute__((__unused__)) **front);
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int s_help(char **args, char __attribute__((__unused__)) **front);
 char **_copyenv(void);
 void free_env(void);
