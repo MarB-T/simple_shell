@@ -1,4 +1,7 @@
 #include "headers.h"
+char *get_location(char *command);
+char *path_dir(char *path);
+list_t *get_dir_path(char *path);
 
 /**
  * get_location - finds a command in the PATH.

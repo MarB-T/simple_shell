@@ -1,4 +1,10 @@
 #include "headers.h"
+int _strncmp(const char *s1, const char *s2, size_t n);
+int _strlen(const char *s);
+char *_strcat(char *dest, const char *src);
+char *_strcpy(char *dest, const char *src);
+char *_strncat(char *dest, const char *src, size_t n);
+
 
 /**
  * _strlen - measures length of string.

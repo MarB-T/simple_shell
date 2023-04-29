@@ -1,5 +1,9 @@
 #include "headers.h"
 
+int token_count(char *str, char *delim);
+int token_len(char *str, char *delim);
+char **_strtok(char *line, char *delim);
+
 /**
  * token_count - counts number of delimi
  *                words within a string.
